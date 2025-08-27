@@ -1,0 +1,129 @@
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #0056b3;
+  --color-background: #f8f9fa;
+  --color-text-dark: #333;
+  --color-text-light: #666;
+}
+ 
+body {  
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+}
+ 
+.services-page {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+/* --- Section Header --- */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+ 
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+ 
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+ 
+/* --- Services Grid --- */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+ 
+/* --- Service Card --- */
+.service-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+/* .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+} */
+ 
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+ 
+.card-title {
+  font-size: 1.5rem;
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+}
+ 
+.card-description {
+  font-size: 1rem;
+  color: var(--color-text-light);
+}
+ 
+/* --- Call to Action Section --- */
+.cta-section {
+  text-align: center;
+  background-color: var(--color-background);
+  border-radius: 12px;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border: 1px solid #e0e0e0;
+}
+ 
+.cta-section h3 {
+  font-size: 2rem;
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+}
+ 
+.cta-section p {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  margin-bottom: 25px;
+}
+ 
+.cta-button {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+ 
+.cta-button:hover {
+  background-color: var(--color-secondary);
+}
+ 
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+ 
+  .cta-section h3 {
+    font-size: 1.5rem;
+  }
+}
