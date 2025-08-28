@@ -204,8 +204,8 @@ const Users = () => {
                 <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Name</th>
                 <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Email</th>
                 <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Role</th>
-                <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Income</th>
-                <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>ID Proof</th>
+                {/* <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Income</th>
+                <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>ID Proof</th> */}
                 <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #ddd' }}>Actions</th>
               </tr>
             </thead>
@@ -214,7 +214,7 @@ const Users = () => {
                 <tr key={user.userId} style={{ borderBottom: '1px solid #eee' }}>
                   <td style={{ padding: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <div style={{
+                      {/* <div style={{
                         width: '40px',
                         height: '40px',
                         borderRadius: '50%',
@@ -226,7 +226,7 @@ const Users = () => {
                         fontWeight: 'bold'
                       }}>
                         {getUserAvatarPlaceholder(user)}
-                      </div>
+                      </div> */}
                       <div>
                         <strong>{getUserDisplayName(user)}</strong>
                         <div style={{ fontSize: '11px', color: '#666' }}>ID: {user.userId}</div>
@@ -239,15 +239,15 @@ const Users = () => {
                       {user.role}
                     </span>
                   </td>
-                  <td style={{ padding: '10px' }}>{formatIncome(user.incomePerAnnum)}</td>
-                  <td style={{ padding: '10px' }}>
+                  {/* <td style={{ padding: '10px' }}>{formatIncome(user.incomePerAnnum)}</td> */}
+                  {/* <td style={{ padding: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                       <span>{getIdProofFileIcon(user.idProofFilePath)}</span>
                       <span style={{ fontSize: '12px', color: '#666' }}>
                         {getIdProofFilename(user.idProofFilePath)}
                       </span>
                     </div>
-                  </td>
+                  </td> */}
                   <td style={{ padding: '10px' }}>
                     <button
                       onClick={() => openUserDetails(user)}
@@ -343,11 +343,11 @@ const Users = () => {
                   <label style={{ fontWeight: 'bold', color: '#333' }}>Role:</label>
                   <p style={{ margin: '5px 0 0 0' }}>{selectedUser.role}</p>
                 </div>
-                <div>
+                {/* <div>
                   <label style={{ fontWeight: 'bold', color: '#333' }}>Annual Income:</label>
                   <p style={{ margin: '5px 0 0 0' }}>{formatIncome(selectedUser.incomePerAnnum)}</p>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <label style={{ fontWeight: 'bold', color: '#333' }}>ID Proof:</label>
                   <p style={{ margin: '5px 0 0 0', display: 'flex', alignItems: 'center', gap: '5px' }}>
                     <span>{getIdProofFileIcon(selectedUser.idProofFilePath)}</span>
@@ -358,7 +358,7 @@ const Users = () => {
                       Path: {selectedUser.idProofFilePath}
                     </p>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
 

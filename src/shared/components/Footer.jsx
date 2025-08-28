@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} SecureShield Insurance. All rights reserved.</p>
         <div className="legal-links">
-          <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+          <a href="/*">Privacy Policy</a> | <a href="/*">Terms of Service</a>
         </div>
       </div>
     </footer>
@@ -43,4 +43,5 @@ const Footer = () => {
 };
  
 export default Footer;
+ 
  

@@ -10,7 +10,7 @@
  
 .site-footer {
   /* background-color: var(--footer-bg); */
-  background-color: #1e1e2f;
+  background-color: #1e3a8a;
   color: var(--footer-text);
   padding: 40px 20px 20px;
   box-shadow: var(--box-shadow);
@@ -92,4 +92,5 @@
 .legal-links a:hover {
   text-decoration: underline;
 }
+ 
  

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Contact.css';
-
-const ContactPage = () => {
+ 
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,7 +10,7 @@ const ContactPage = () => {
     message: ''
   });
   const [status, setStatus] = useState('');
-
+ 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -18,16 +18,16 @@ const ContactPage = () => {
       [name]: value
     });
   };
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically handle form submission, e.g., send data to an API
-    
+   
     // For this example, we'll just show a success message
     setStatus('Message sent successfully!');
     setFormData({ name: '', email: '', subject: '', message: '' }); // Clear the form
   };
-
+ 
   return (
     <div className="contact-page-container">
       {/* Hero Section */}
@@ -39,7 +39,7 @@ const ContactPage = () => {
           </p>
         </div>
       </section>
-
+ 
       {/* Main Contact Section */}
       <section className="section contact-main-section">
         <div className="contact-info-card">
@@ -47,7 +47,8 @@ const ContactPage = () => {
           <div className="info-item">
             {/* <span className="icon">📍</span> */}
             <h3>Our Office</h3>
-            <p>123 Auto Street, Suite 456<br />Insurance City, IC 78901</p>
+            {/* <p>123 Auto Street, Suite 456<br />Insurance City, IC 78901</p> */}
+            <p>1-76/546 Raj Enclave,<br />Shyamlal Street, Chennai</p>
           </div>
           <div className="info-item">
             {/* <span className="icon">📞</span> */}
@@ -64,5 +65,6 @@ const ContactPage = () => {
     </div>
   );
 };
-
-export default ContactPage;
+ 
+export default Contact;
+ 

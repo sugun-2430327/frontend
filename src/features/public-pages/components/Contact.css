@@ -1,5 +1,5 @@
 /* ContactPage.css */
-
+ 
 /* --- General Styles & Variables (re-used for consistency) --- */
 :root {
   --primary-color: #007bff;
@@ -10,24 +10,24 @@
   --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   --transition-speed: 0.3s ease-in-out;
 }
-
+ 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
 }
-
+ 
 .contact-page-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
+ 
 .section {
   padding: 80px 0;
 }
-
+ 
 .btn {
   padding: 12px 28px;
   border: none;
@@ -37,40 +37,42 @@ body {
   transition: all var(--transition-speed);
   font-size: 1rem;
 }
-
+ 
 .btn.primary-cta {
   background: var(--primary-color);
   color: var(--text-color-light);
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
-
+ 
 .btn.primary-cta:hover {
   background: #0056b3;
   transform: translateY(-2px);
 }
-
+ 
 /* --- Contact Hero Section --- */
 .contact-hero-section {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542362567-b08e54359403?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDc1NTR8MHwxfHNlYXJjaHw3fHxjYXJzJTIwaW5zdXJhbmNlfGVufDB8fHx8MTcwMDcwNzU2Nnw&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+  min-height: 400px;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 64, 175, 0.7) 100%);
   color: var(--text-color-light);
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 30px 30px;
 }
-
+ 
 .contact-hero-section h1 {
   font-size: clamp(2.5em, 5vw, 4em);
   margin-bottom: 0.5em;
   line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
+ 
 .contact-hero-section .subheadline {
   font-size: clamp(1.1em, 2vw, 1.5em);
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.9;
 }
-
+ 
 /* --- Main Contact Section --- */
 .contact-main-section {
   display: flex;
@@ -78,7 +80,7 @@ body {
   gap: 40px;
   align-items: center;
 }
-
+ 
 .contact-form-card {
   background: var(--card-bg);
   padding: 40px;
@@ -87,34 +89,34 @@ body {
   max-width: 600px;
   width: 100%;
 }
-
+ 
 .contact-form-card h2 {
   font-size: 2em;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
-
+ 
 .contact-form-card p {
   margin-bottom: 25px;
   opacity: 0.8;
 }
-
+ 
 .form-status {
   color: green;
   font-weight: bold;
   margin-bottom: 15px;
 }
-
+ 
 .contact-form .form-group {
   margin-bottom: 20px;
 }
-
+ 
 .contact-form label {
   display: block;
   font-weight: bold;
   margin-bottom: 8px;
 }
-
+ 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -124,11 +126,11 @@ body {
   font-size: 1rem;
   box-sizing: border-box;
 }
-
+ 
 .contact-form textarea {
   resize: vertical;
 }
-
+ 
 .contact-info-card {
   background: var(--card-bg);
   padding: 40px;
@@ -137,35 +139,35 @@ body {
   max-width: 400px;
   width: 100%;
 }
-
+ 
 .contact-info-card h2 {
   font-size: 2em;
   color: var(--primary-color);
   margin-bottom: 25px;
 }
-
+ 
 .info-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
+ 
 .info-item .icon {
   font-size: 1.5em;
   margin-right: 15px;
 }
-
+ 
 .info-item h3 {
   font-size: 1.2em;
   margin: 0;
 }
-
+ 
 .info-item p {
   margin: 0;
   color: #555;
 }
-
+ 
 /* --- Responsive Design --- */
 @media (min-width: 992px) {
   .contact-main-section {
@@ -175,3 +177,4 @@ body {
     gap: 80px;
   }
 }
+ 

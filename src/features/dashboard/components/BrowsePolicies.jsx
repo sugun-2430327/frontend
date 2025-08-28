@@ -66,7 +66,7 @@ const BrowsePolicies = () => {
         return;
       }
 
-      console.log('📝 Submitting enrollment with vehicle details:', vehicleDetails);
+      //console.log('📝 Submitting enrollment with vehicle details:', vehicleDetails);
       const enrollment = await enrollInPolicyTemplate(policyTemplateId, vehicleDetails);
       setEnrollmentMessage(`✅ Enrollment submitted successfully! Your enrollment ID is ${enrollment.enrollmentId}. Status: ${enrollment.enrollmentStatus}`);
       setShowEnrollmentForm(false);

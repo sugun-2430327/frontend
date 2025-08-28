@@ -68,14 +68,9 @@ const Services = () => {
           </div>
         ))}
       </main>
- 
-      <section className="cta-section">
-        <h3>Ready to find the right coverage?</h3>
-        <p>Get a free, no-obligation quote in minutes.</p>
-        <button className="cta-button" onClick={() =>navigate('/')}>Get a Quote Now</button>
-      </section>
     </div>
   );
 };
  
 export default Services;
+ 

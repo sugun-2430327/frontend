@@ -13,10 +13,6 @@ export const enrollInPolicyTemplate = async (policyTemplateId, vehicleDetails = 
       enrollmentDate: new Date().toISOString()
     };
 
-    console.log('🚗 Enrollment Data being sent to backend:', {
-      policyTemplateId,
-      enrollmentData
-    });
 
     const response = await fetch(`${API_BASE_URL}/${policyTemplateId}/enroll`, {
       method: 'POST',
