@@ -248,8 +248,8 @@ const Enrollments = () => {
                     {getUserDisplayName({ 
                       username: enrollment.customerName,
                       email: enrollment.customerEmail,
-                      firstName: enrollment.customerFirstName,
-                      lastName: enrollment.customerLastName
+                      firstName: enrollment.firstName,
+                      lastName: enrollment.lastName
                     })}<br/>
                     <small style={{ color: '#666' }}>{enrollment.customerEmail}</small>
                   </td>

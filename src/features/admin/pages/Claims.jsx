@@ -248,6 +248,7 @@ const Claims = () => {
                   <td style={{ padding: '10px' }}>
                     <div>
                       <strong>{claim.customerName || '—'}</strong>
+                      <div style={{ fontSize: '11px', color: '#666' }}>{claim.customerEmail || '—'}</div>
                     </div>
                   </td>
                   <td style={{ padding: '10px' }}>

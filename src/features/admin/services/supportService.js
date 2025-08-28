@@ -129,6 +129,18 @@ export const validateTicketData = (ticketData) => {
   };
 };
 
+// Format customer display name with firstName and lastName for tickets
+const formatCustomerDisplayName = (firstName, lastName, username) => {
+  if (firstName && lastName) {
+    return `${firstName} ${lastName} (${username || 'Unknown'})`;
+  } else if (firstName) {
+    return `${firstName} (${username || 'Unknown'})`;
+  } else if (lastName) {
+    return `${lastName} (${username || 'Unknown'})`;
+  }
+  return username || 'Unknown Customer';
+};
+
 // Format ticket data for display
 export const formatTicketForDisplay = (ticket) => {
   if (!ticket) {
@@ -143,11 +155,15 @@ export const formatTicketForDisplay = (ticket) => {
     status: ticket.ticketStatus || ticket.status || 'OPEN',
     createdDate: ticket.createdDate || ticket.createdAt,
     resolvedDate: ticket.resolvedDate || ticket.resolvedAt,
-    customerName: ticket.customerName || ticket.customer?.name,
+    customerName: formatCustomerDisplayName(ticket.firstName, ticket.lastName, ticket.customerUsername),
+    customerUsername: ticket.customerUsername || '',
     customerEmail: ticket.customerEmail || ticket.customer?.email,
-    resolvedByAdminName: ticket.resolvedByAdminName || ticket.resolvedBy?.name,
-    resolutionNotes: ticket.resolutionNotes || '',
+    firstName: ticket.firstName || '',
+    lastName: ticket.lastName || '',
+    resolvedByAdminName: ticket.resolvedByAdminName || ticket.resolvedBy?.name || ticket.resolvedByUsername,
+    resolutionNotes: ticket.resolutionNotes || ticket.resolution || '',
     policyEnrollmentId: ticket.policyEnrollmentId,
+    policyNumber: ticket.policyNumber,
     claimId: ticket.claimId
   };
 };

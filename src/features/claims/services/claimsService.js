@@ -131,6 +131,18 @@ export const validateClaimData = (claimData) => {
   };
 };
 
+// Format customer display name with firstName and lastName
+const formatCustomerDisplayName = (firstName, lastName, username) => {
+  if (firstName && lastName) {
+    return `${firstName} ${lastName} (${username || 'Unknown'})`;
+  } else if (firstName) {
+    return `${firstName} (${username || 'Unknown'})`;
+  } else if (lastName) {
+    return `${lastName} (${username || 'Unknown'})`;
+  }
+  return username || 'Unknown Customer';
+};
+
 // Format claim data for display
 export const formatClaimForDisplay = (claim) => {
   if (!claim) {
@@ -145,7 +157,8 @@ export const formatClaimForDisplay = (claim) => {
     policyEnrollmentId: claim.policyEnrollmentId,
     // Use actual API field names as primary
     policyNumber: claim.generatedPolicyNumber || claim.policyNumber || `POL-${claim.policyEnrollmentId}`,
-    customerName: claim.customerUsername || claim.customerName || claim.customer?.name || 'Unknown Customer',
+    customerName: formatCustomerDisplayName(claim.firstName, claim.lastName, claim.customerUsername),
+    customerUsername: claim.customerUsername || '',
     customerId: claim.customerUsername || claim.customerId || claim.customerEmail || 'Unknown ID',
     claimAmount: claim.claimAmount || 0,
     claimDescription: claim.claimDescription || '',
@@ -157,6 +170,8 @@ export const formatClaimForDisplay = (claim) => {
     adminNotes: claim.adminNotes || '',
     // Add additional fields from actual API response
     customerEmail: claim.customerEmail || '',
+    firstName: claim.firstName || '',
+    lastName: claim.lastName || '',
     adminUsername: claim.adminUsername || ''
   };
 };
