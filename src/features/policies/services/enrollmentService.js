@@ -216,15 +216,12 @@ export const validateEnrollmentForm = (vehicleDetails) => {
   // Check for minimum information
   const details = vehicleDetails.toLowerCase();
   const hasYear = /\b(19|20)\d{2}\b/.test(details);
-  const hasMake = /(honda|toyota|ford|bmw|mercedes|audi|nissan|hyundai|kia|volkswagen|chevrolet|mazda|subaru|lexus|acura|infiniti)/.test(details);
   
   if (!hasYear) {
     errors.push('Please include the vehicle year');
   }
   
-  if (!hasMake) {
-    errors.push('Please include the vehicle make/brand');
-  }
+  // Allow any vehicle make/brand - users can enter any manufacturer
   
   return {
     isValid: errors.length === 0,
