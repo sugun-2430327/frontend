@@ -60,7 +60,7 @@ function Navbar({ user, onLogout }) {
 
   return (
     <nav className="navbar">
-      <div className="logo" onClick={() => navigate('/')}>Secure Shield</div>
+      <div className="logo" onClick={() => navigate('/home')}>Secure Shield</div>
       {user ? (
         <div className="nav-user" ref={dropdownRef}>
           {/* <span>Welcome, {user.name}</span> */}

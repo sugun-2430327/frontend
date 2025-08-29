@@ -10,7 +10,7 @@ const Footer = () => {
           <ul>
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Our Services</a></li>
-            <li><a href="/">Get Premium Estimation</a></li>
+            <li><a href="/contact">Contact Us</a></li>
             <li><a href="/">FAQ</a></li>
           </ul>
         </div>
