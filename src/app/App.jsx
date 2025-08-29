@@ -1,39 +1,3 @@
-// import React, { useState } from 'react';
-// import Navbar from './components/Navbar';
-// import Login from './components/Login';
-// import CustomerDashboard from './components/CustomerDashboard';
-// import Home from './components/Home';
-// import './index.css';
-
-// function App() {
-//   const [user, setUser] = useState(null); // { name, role }
-
-//   const handleLogin = (credentials) => {
-//     // Simulated login logic
-//     const { identifier, password, role } = credentials;
-//     if ((identifier === 'customer@example.com' || identifier === 'customer') && password === '1234' && role === 'customer') {
-//       setUser({ name: 'Customer', role: 'customer' });
-//     } else if ((identifier === 'admin@example.com' || identifier === 'admin') && password === 'admin' && role === 'admin') {
-//       setUser({ name: 'Admin', role: 'admin' });
-//     } else {
-//       alert('Invalid credentials');
-//     }
-//   };
-
-//   const handleLogout = () => setUser(null);
-
-//   return (
-//     <div>
-//       <Navbar user={user} onLogout={handleLogout} />
-//       {!user ? <Home /> : user.role === 'customer' ? <CustomerDashboard user={user} /> : <div>Admin Dashboard Coming Soon</div>}
-//       {!user && <Login onLogin={handleLogin} />}
-
-//     </div>
-//   );
-// }
-
-// export default App;
-
 
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
