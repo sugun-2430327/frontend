@@ -9,8 +9,8 @@ function Register({ onRegister }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("CUSTOMER");
-  const [incomePerAnnum, setIncomePerAnnum] = useState("");
-  const [idProofFile, setIdProofFile] = useState(null);
+  const [age, setAge] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -87,6 +87,13 @@ function Register({ onRegister }) {
       setLoading(false);
       return;
     }
+
+    // Age validation
+    if (age && (isNaN(age) || parseInt(age) < 18 || parseInt(age) > 150)) {
+      setError("Age must be between 18 and 150 years");
+      setLoading(false);
+      return;
+    }
  
     try {
       const userData = {
@@ -96,10 +103,10 @@ function Register({ onRegister }) {
         password,
         email,
         role,
-        incomePerAnnum: incomePerAnnum ? parseFloat(incomePerAnnum) : null,
+        age: age ? parseInt(age) : null,
       };
  
-      const result = await registerUser(userData, idProofFile);
+      const result = await registerUser(userData);
       setSuccess(result.message);
  
       // Navigate to login after successful registration
@@ -182,6 +189,15 @@ function Register({ onRegister }) {
         maxLength={20}
       />
  
+      <input
+        type="number"
+        placeholder="Age (18+ years required)"
+        value={age}
+        onChange={(e) => setAge(e.target.value)}
+        min="18"
+        max="150"
+      />
+
       <select value={role} onChange={(e) => setRole(e.target.value)} required>
         <option value="CUSTOMER">Customer</option>
         <option value="ADMIN">Admin</option>

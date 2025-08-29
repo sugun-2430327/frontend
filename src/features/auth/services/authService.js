@@ -45,8 +45,8 @@ export const registerUser = async (userData, idProofFile = null) => {
     formData.append('email', userData.email);
     formData.append('role', userData.role || 'CUSTOMER');
     
-    if (userData.incomePerAnnum) {
-      formData.append('incomePerAnnum', userData.incomePerAnnum);
+    if (userData.age) {
+      formData.append('age', userData.age);
     }
     
     if (idProofFile) {
@@ -85,7 +85,7 @@ export const registerUserJSON = async (userData) => {
         password: userData.password,
         email: userData.email,
         role: userData.role || 'CUSTOMER',
-        incomePerAnnum: userData.incomePerAnnum || null
+        age: userData.age || null
       })
     });
 

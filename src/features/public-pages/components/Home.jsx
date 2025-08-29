@@ -201,19 +201,19 @@ const Home = () => {
  
   const faqs = [
     {
-      title: "How does the quote calculator work?",
+      title: "Can I insure more than one vehicle?",
       content:
-        "Our calculator uses your vehicle and driver information to provide a real-time, personalized estimate based on our underwriting models.",
+        "Yes, you can add and manage multiple vehicles under one account.",
     },
     {
-      title: "What types of vehicles do you cover?",
+      title: "How do I file a claim?",
       content:
-        "We cover a wide range of vehicles, including sedans, SUVs, trucks, and electric vehicles. You can get premium for any make and model.",
+        "Log in, go to “Claims,” fill out the form, and submit your documents.",
     },
     {
-      title: "Is the claim process really that simple?",
+      title: "Can I check my policy details anytime?",
       content:
-        "Yes! Our streamlined mobile app and web portal allow you to file a claim in just a few clicks, upload photos, and track its status from start to finish.",
+        "Yes, just log in and go to the “My Policies” section..",
     },
   ];
  
